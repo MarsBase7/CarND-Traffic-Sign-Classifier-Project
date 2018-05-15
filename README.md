@@ -6,7 +6,7 @@ This is a brief writeup report of Self-Driving Car Engineer P2.
 [//]: # (Image References)
 
 [image1]: ./examples/german_traffic_sign.png
-[image2]: ./examples/No.2_speed_limit_50.png
+[image2]: ./examples/No.0_speed_limit_20.png
 [image3]: ./examples/sign_label_bar.png
 [image4]: ./examples/grayscale.png
 [image5]: ./examples/validation_accuracy.png
