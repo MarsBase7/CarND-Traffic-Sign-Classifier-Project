@@ -111,7 +111,8 @@ hyperparameters set up in the training model:
 ### 4. The approach taken for finding a solution
 
 During the training process(50 epoch), the accuracy changes as below：
-![alt text][image1]
+
+![alt text][image5]
 
 It has a nice start at about 80%, and increases beyond 90% very quickly. With the benefit from GTX970, the time overhead of training process is much less.
 
