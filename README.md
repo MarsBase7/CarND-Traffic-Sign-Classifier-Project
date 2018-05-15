@@ -43,16 +43,16 @@ The data set has 43 unique classes, but the amount of each class is not even. Th
 
 #### preprocess the image data
 
-What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+Pre-processing refers to techniques such as converting to grayscale, normalization, etc. 
 
-1.Convert the images to grayscale
+**1. Convert the images to grayscale**
 
 Use the `cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)` to convert images. 
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image4]
 
-2.Normalize the image data
+**2. Normalize the image data**
 
 Devide every pixel of an image by `255` to make the pixel value be in 0~1, which can approch the training process starting with a relatively good validation accuracy.
 
@@ -64,9 +64,12 @@ Normalize formulas tried:
 | pixel / 255 - 0.5 | ~ 96% | ~ 94% |
 | pixel / 255 | ~ 97% | ~ 95% |
 
-3.Generate additional data 
 
-~~ <small>Not yet.</small> ~~
+
+**3. Generate additional data**
+
+<small>Not yet.</small>
+
 
 
 
