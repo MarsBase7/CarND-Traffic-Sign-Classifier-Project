@@ -33,11 +33,11 @@ Use the `pickle` library to load data and `.shape` to calculate summary statisti
 
 ### 2. Exploratory visualization of the dataset.
 
-The German traffic signs data set has mapping relations between images and labels. Here is the image (with label index No.2) from the training data, and it's label is `Speed limit (50km/h)`.
+The German traffic signs data set has mapping relations between images and labels. Here is a image (with label index No.2) from the training data, and it's label is `Speed limit (50km/h)`.
 
 ![alt text][image2]
 
-The data set has 43 unique classes, but the amount of each class is not even. The bar chart below shows how the data labels distributed.
+As we know, the data set has 43 unique classes, but the amount of each class is not even. The bar chart below shows how the data labels distributed.
 
 ![alt text][image3]
 
@@ -50,14 +50,13 @@ Pre-processing refers to techniques such as converting to grayscale, normalizati
 
 * **Convert the images to grayscale**
 
-Use the `cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)` to convert images. 
-Here is an example of a traffic sign image before and after grayscaling.
+Use `cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)` to convert images. Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image4]
 
 * **Normalize the image data**
 
-Devide every pixel of an image by `255` to make the pixel value be in 0~1, which can approch the training process starting with a relatively good validation accuracy.
+Every pixel of an image divided by `255` to make the pixel value be in 0~1, which can approch the training process starting with a relatively good validation accuracy.
 
 Normalize formulas tried:
 
@@ -101,8 +100,8 @@ The final model consisted of the following layers:
 
 ### 3. Training model
 
-By referencing the LeNet-5 model, the type of optimizer is AdamOptimizer, which used as `tf.train.AdamOptimizer` in TesorFlow. Here are 
-hyperparameters set up in the training model:
+By referencing the LeNet-5 model, the type of optimizer is AdamOptimizer, which used as `tf.train.AdamOptimizer` in TensorFlow. Here are 
+some hyperparameters set up in the training model:
 
 * `EPOCHS = 50`
 * `BATCH_SIZE = 128`
@@ -121,13 +120,13 @@ The final model results were:
 * validation set accuracy of `97.6%`
 * test set accuracy of `95.4%`
 
-The neural networks model references the **LeNet-5** implementation with some layers and parameters fine tuned. LeNet-5 is a well known architecture, which chosen by these reasons:
+The neural networks model of this project references the **LeNet-5** implementation with some layers and parameters fine tuned. LeNet-5 is a well known architecture, which chosen by these reasons:
 
 * LeNet-5 is good at digit recognition, and it can be used in signs recognition similarly.
 * The architecture is concise and elegant, which is beneficial to retrofit.
 * Adjustable parameters are not many for training tune. 
 
-BTW, at the beginning, when original LeNet-5 architecture and data set were used for training, the result accuracy was not so good (lower than 90%). Here is the approach taken for getting a better result:
+BTW, at the beginning, when original LeNet-5 architecture and data set were used for training directly, the result accuracy was not so good (lower than 90%). Here is the approach taken for getting a better result:
 
 * Convert the images to grayscale : Accuracy +2%
 * Normalize the image data : Accuracy +1% 
@@ -145,8 +144,6 @@ Here are five German traffic signs that found on the web:
 The second image might be difficult to classify because the shape of sign is rather complicated and might be similar with pedestrains or children, which is hard to distinguish for the model when images grayscaled.
 
 ### 2. Model's predictions on new traffic signs
-
- and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
